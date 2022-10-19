@@ -1,0 +1,7 @@
+Bundle-Name: Web Services Description Language for Java
+Bundle-SymbolicName: javax.wsdl
+Bundle-Version: 1.6
+Bundle-Vendor: Debian.org
+Import-Package: *
+Export-Package: *
+-nouses: true

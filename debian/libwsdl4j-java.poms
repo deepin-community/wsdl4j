@@ -1,0 +1,2 @@
+debian/wsdl4j.pom --has-package-version --java-lib --artifact=debian/wsdl4j.jar
+debian/wsdl4j-qname.pom --has-package-version --java-lib --usj-name=qname --artifact=build/lib/qname.jar

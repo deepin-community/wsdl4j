@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+%:
+	dh $@ --with javahelper,maven_repo_helper --buildsystem=ant
+
+override_dh_auto_build:
+	dh_auto_build -- compile javadocs
+	bnd wrap --properties debian/wsdl4j.bnd --output debian/wsdl4j.jar build/lib/wsdl4j.jar
+
+get-orig-source:
+	-uscan --download-current-version --force-download

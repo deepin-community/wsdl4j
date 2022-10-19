@@ -1,0 +1,39 @@
+Source: wsdl4j
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Steffen Moeller <steffen_moeller@gmx.de>,
+ Torsten Werner <twerner@debian.org>,
+ Jakub Adam <jakub.adam@ktknet.cz>
+Build-Depends:
+ bnd,
+ debhelper (>= 10),
+ ant,
+ default-jdk,
+ javahelper,
+ maven-repo-helper
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/wsdl4j.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/wsdl4j.git
+Homepage: http://wsdl4j.sourceforge.net
+
+Package: libwsdl4j-java
+Architecture: all
+Depends: ${misc:Depends}
+Description: Webservice description language for Java
+ The Web Services Description Language for Java Toolkit (WSDL4J) allows
+ the creation, representation, and manipulation of WSDL documents. Is
+ the reference implementation for JSR110 'JWSDL' (jcp.org).
+
+Package: libwsdl4j-java-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Suggests: libwsdl4j-java
+Description: Documentation for Java Web Services Library
+ The Web Services Description Language for Java Toolkit (WSDL4J) allows
+ the creation, representation, and manipulation of WSDL documents. Is
+ the reference implementation for JSR110 'JWSDL' (jcp.org).
+ .
+ This package contains documentation.

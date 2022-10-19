@@ -1,0 +1,14 @@
+wsdl4j for Debian
+-----------------
+
+The principles of Web Services Description Language (WSDL) is described together
+with SOAP in Wikipedia and has a page on its own  at
+http://en.wikipedia.org/wiki/Web_Services_Description_Language
+
+Its packaging was seeded in an effort to provide the basis for a packaging of
+tools and libraries with the pkg-eScience project at
+http://pkg-eScience.alioth.debian.org.
+
+Steffen
+
+ -- Steffen Moeller <steffen_moeller@gmx.de>, Sun,  7 May 2006 22:37:09 +0200

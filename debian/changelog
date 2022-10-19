@@ -1,0 +1,160 @@
+wsdl4j (1.6.3-4.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 23:43:55 +0100
+
+wsdl4j (1.6.3-4) unstable; urgency=medium
+
+  * Team upload.
+  * Restored the Export-Package field in the OSGi metadata to avoid
+    a build failure with eclipse-wtp
+  * Improved the clean target
+  * Moved the package to Git
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 04 Nov 2016 23:55:13 +0100
+
+wsdl4j (1.6.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Declare compliance with Debian Policy 3.9.8.
+  * Use only Build-Depends field.
+  * Switch from cdbs to dh sequencer.
+  * Build with maven_repo_helper and install Maven artifacts. (Closes: #820841)
+
+ -- Markus Koschany <apo@debian.org>  Fri, 15 Apr 2016 14:49:08 +0200
+
+wsdl4j (1.6.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Transition to bnd 2.1.0.
+    debian/rules: Switch to new bnd parameter syntax and change output
+    directory to debian/tmp to prevent a FTBFS.
+  * Use compat level 9 and require debhelper >= 9.
+  * Declare compliance with Debian Policy 3.9.6.
+  * wrap-and-sort -sa.
+  * Use canonical Vcs-URI.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 17 Nov 2015 17:47:42 +0100
+
+wsdl4j (1.6.3-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+ -- tony mancill <tmancill@debian.org>  Mon, 13 May 2013 21:20:22 -0700
+
+wsdl4j (1.6.2-5) experimental; urgency=low
+
+  [ Miguel Landaeta ]
+  * Team upload.
+  * Ensure backwards compatible bytecode is built (LP: #1049817):
+    - d/ant.properties: Specify source/target = 1.5 when compiling java
+      source code. Thanks to James Page for the patch. (Closes: #688306).
+  * Remove Michael Koch from Uploaders list.
+    Thanks for the work on this package. (Closes: #654140).
+
+  [ Jakub Adam ]
+  * Use jh_installjavadoc to install API documentation.
+  * Removed useless debhelper.mk include from d/rules.
+  * Don't run useless 'dist' target during build.
+    - Running 'compile' and 'dist' in sequence caused that JARs were
+      built two times. Invoking 'compile' and 'javadocs' targets creates
+      all the artefacts we need for out packaging.
+  * Use bnd to generate OSGi metadata.
+  * Bump Standards-Version to 3.9.4. No changes were required.
+
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Mon, 21 Jan 2013 19:21:12 +0100
+
+wsdl4j (1.6.2-4) unstable; urgency=low
+
+  * Add OSGi metadata to JAR manifest
+  * Bump Standards-Version to 3.9.2
+
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Sat, 19 Nov 2011 16:45:39 +0100
+
+wsdl4j (1.6.2-3) unstable; urgency=low
+
+  * Switch to source format 3.0.
+  * Switch to debhelper level 7.
+  * Update Standards-Version: 3.9.1.
+  * Remove Java runtime from Depends.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Aug 2011 17:17:38 +0200
+
+wsdl4j (1.6.2-2) unstable; urgency=low
+
+  [ Matthias Klose ]
+  * (Build-)depend on default-jre/-jdk.
+
+  [ Torsten Werner ]
+  * Fix Homepage field in debian/control. (Closes: #535583)
+  * Move doc-base file to the correct binary package and fix it.
+  * Add missing Depends: ${misc:Depends}.
+  * Change Section: java.
+  * Fix Copyright notice in debian/copyright.
+  * Update Standards-Version: 3.8.2.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 07 Jul 2009 21:40:56 +0200
+
+wsdl4j (1.6.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    + Add Homepage, Vcs-{Svn, Browser} Headers.
+    + Build-Depend on debhelper >=5
+  * debian/compat: switch to 5
+  * debian/rules:
+    + Clean up old comments.
+    + Add install target to install jars and create symbolic links
+  * Remove debian/libwsdl4j-java.install and debian/libwsdl4j-java.links
+  * Add debian/orig-tar.sh to repackage the source (zip) and create
+    orig.tar.gz
+  * Add build.diff patch to fix the broken build.xml file.
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Thu, 08 Nov 2007 22:49:36 +0530
+
+wsdl4j (1.5.2-4) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Koch <konqueror@gmx.de>  Fri, 20 Apr 2007 17:26:02 -0100
+
+wsdl4j (1.5.2-3) experimental; urgency=low
+
+  * Merged from Ubuntu.
+  * Upload to experimental.
+
+ -- Michael Koch <konqueror@gmx.de>  Sat,  3 Mar 2007 10:52:34 +0100
+
+wsdl4j (1.5.2-2ubuntu1) edgy; urgency=low
+
+  * Upload to edgy.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 27 Sep 2006 11:02:28 +0000
+
+wsdl4j (1.5.2-2) unstable; urgency=low
+
+  * Initial upload to Debian archive (Closes: #).
+  * Added build-dependencies and dependencies.
+  * Upgraded Standards-Version to 3.7.2.
+  * Changed rules to use cdbs.
+  * Changed installation files.
+  (Patches by Vladimír Lapáček)
+
+ -- Michael Koch <konqueror@gmx.de>  Tue, 26 Sep 2006 04:17:59 +0000
+
+wsdl4j (1.5.2-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Steffen Moeller <steffen_moeller@gmx.de>  Sun,  7 May 2006 22:37:09 +0200
+
+wsdl4j (1.5.1-1) unstable; urgency=low
+
+  * Initial version based of the work of the Fedora packagers.
+
+ -- Stephan Michels <stephan@apache.org>  Mon,  9 Jan 2006 11:40:09 +0100
+
